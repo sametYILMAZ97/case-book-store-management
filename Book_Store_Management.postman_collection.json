@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "513819bc-0c9e-4371-90bd-8dac2a61d880",
+		"name": "Book Store Management API v2 Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28513857",
+		"_collection_link": "https://poliark-cloud-run-services.postman.co/workspace/Poliark-Team-Workspace~7c659b37-6fcd-4349-96dc-d7ceb10c1ffe/collection/28513857-513819bc-0c9e-4371-90bd-8dac2a61d880?action=share&source=collection_link&creator=28513857"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"your_secure_password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create Initial Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"your_secure_password\",\n    \"role\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/initial-admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"initial-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"newuser\",\n    \"password\": \"user_password\",\n    \"role\": \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Sample Book 2\",\n    \"author\": \"John Doe\",\n    \"description\": \"A sample book description\",\n    \"isbn\": \"1234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "book_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookstores",
+			"item": [
+				{
+					"name": "Create Bookstore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sample Bookstore\",\n    \"address\": \"123 Main St, City, Country\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookstores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookstores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bookstores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookstores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookstores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bookstore by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookstores/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookstores",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bookstore_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Book to Bookstore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookstores/:id/add-book/:bookId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookstores",
+								":id",
+								"add-book",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bookstore_id_here"
+								},
+								{
+									"key": "bookId",
+									"value": "book_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Book from Bookstore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookstores/:id/remove-book/:bookId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookstores",
+								":id",
+								"remove-book",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bookstore_id_here"
+								},
+								{
+									"key": "bookId",
+									"value": "book_id_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "accessToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiNjVjMDNiNDAtMGJmYi00YzgxLTg1OGYtZTYyMWY2NzdkMjcwIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM1NzM2NDEzLCJleHAiOjE3MzU3NDAwMTN9.7uc0qli6sWfpjGuq0-3V8yvLDQY_EetosvRArPpqoF4",
+			"type": "string"
+		}
+	]
+}
