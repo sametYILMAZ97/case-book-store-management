@@ -26,11 +26,11 @@
 
 A robust book store management system built with NestJS and TypeORM.
 
-## 🏗️ Architecture
-![Project Architecture](./docs/images/architecture.png)
+## Postman Samples
 
-## 📊 Database Schema
-![Database Schema](./docs/images/db-schema.png)
+![Auth API Sample](https://github.com/sametYILMAZ97/case-book-store-management/blob/main/postman_screens/case_auth.png)
+
+![Books API Sample](https://github.com/sametYILMAZ97/case-book-store-management/blob/main/postman_screens/case_books.png)
 
 ## 🛠️ Tech Stack
 
