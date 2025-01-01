@@ -26,6 +26,12 @@
 
 A robust book store management system built with NestJS and TypeORM.
 
+## 🏗️ Architecture
+![Project Architecture](./docs/images/architecture.png)
+
+## 📊 Database Schema
+![Database Schema](./docs/images/db-schema.png)
+
 ## 🛠️ Tech Stack
 
 - **Framework:** NestJS
