@@ -34,11 +34,11 @@ A robust book store management system built with NestJS and TypeORM.
 - **Database:** PostgreSQL
 - **Authentication:** JWT (JSON Web Tokens)
 - **Password Hashing:** bcrypt
-- **API Documentation:** Swagger/OpenAPI
 
 ## 🏗️ Models & Rules
 
 ### 👤 User
+
 - **Fields:**
   - `id`: UUID (auto-generated)
   - `username`: String (unique)
@@ -48,6 +48,7 @@ A robust book store management system built with NestJS and TypeORM.
   - `updatedAt`: DateTime
 
 ### 📖 Book
+
 - **Fields:**
   - `id`: UUID (auto-generated)
   - `title`: String
@@ -59,6 +60,7 @@ A robust book store management system built with NestJS and TypeORM.
   - `updatedAt`: DateTime
 
 ### 🏪 Bookstore
+
 - **Fields:**
   - `id`: UUID (auto-generated)
   - `name`: String
@@ -70,6 +72,7 @@ A robust book store management system built with NestJS and TypeORM.
 ## 🔌 API Endpoints
 
 ### 🔐 Authentication
+
 ```http
 POST /auth/login
 {
@@ -84,6 +87,7 @@ Response:
 ```
 
 ### 👥 Users
+
 ```http
 # Create User
 POST /users
@@ -110,6 +114,7 @@ DELETE /users/:id
 ```
 
 ### 📚 Books
+
 ```http
 # Create Book
 POST /books
@@ -138,6 +143,7 @@ DELETE /books/:id
 ```
 
 ### 🏬 Bookstores
+
 ```http
 # Create Bookstore
 POST /bookstores
@@ -168,26 +174,17 @@ PUT /bookstores/:id/remove-book/:bookId
 ## 🧪 Testing
 
 ### Unit Tests
+
 Run unit tests using Jest:
+
 ```bash
 npm run test:unit
-```
-
-### E2E Tests
-Run end-to-end tests:
-```bash
-npm run test:e2e
-```
-
-### Test Coverage
-Generate test coverage report:
-```bash
-npm run test:cov
 ```
 
 ### Test Examples
 
 #### User Service Tests
+
 ```typescript
 describe('UsersService', () => {
   it('should create a new user', async () => {
@@ -202,6 +199,7 @@ describe('UsersService', () => {
 ```
 
 #### Authentication Tests
+
 ```typescript
 describe('AuthController (e2e)', () => {
   it('/auth/login (POST)', () => {
@@ -209,7 +207,7 @@ describe('AuthController (e2e)', () => {
       .post('/auth/login')
       .send({ username: 'admin', password: 'password123' })
       .expect(201)
-      .expect(res => {
+      .expect((res) => {
         expect(res.body).toHaveProperty('access_token');
       });
   });
@@ -217,6 +215,7 @@ describe('AuthController (e2e)', () => {
 ```
 
 #### Book API Tests
+
 ```typescript
 describe('BookController (e2e)', () => {
   it('/books (GET)', () => {
@@ -231,27 +230,20 @@ describe('BookController (e2e)', () => {
 
 ## 🚀 Getting Started
 
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/book-store-management.git
-```
+1. Install dependencies
 
-2. Install dependencies
 ```bash
 npm install
 ```
 
-3. Configure environment variables
-```bash
-cp .env.example .env
-```
+2. Run migrations
 
-4. Run migrations
 ```bash
 npm run typeorm:run-migrations
 ```
 
-5. Start the application
+3. Start the application
+
 ```bash
 npm run start:dev
 ```
@@ -261,6 +253,7 @@ npm run start:dev
 - JWT-based authentication
 - Token expires in 24 hours
 - Include token in Authorization header:
+
 ```http
 Authorization: Bearer <your_jwt_token>
 ```
@@ -272,14 +265,12 @@ Authorization: Bearer <your_jwt_token>
 - **STAFF**: View books and bookstore information
 
 ## 🏗️ Project Structure
+
 ```
-book-store-management/
-├── src/
-│   ├── auth/
-│   ├── users/
-│   ├── books/
-│   ├── bookstores/
-│   └── common/
-├── test/
-└── ...configuration files
+src/
+├── auth/                 # Authentication module
+├── users/               # User management
+├── books/              # Book management
+├── bookstores/         # Bookstore management
+└── common/             # Shared resources
 ```
