@@ -41,6 +41,34 @@ A robust book store management system built with NestJS and TypeORM.
 - **Authentication:** JWT (JSON Web Tokens)
 - **Password Hashing:** bcrypt
 
+## ✅ Features Implementation Status
+
+### User Role
+- [x] View all bookstores (Implemented via GET /bookstores endpoint)
+- [x] View books available in each store (Implemented via GET /bookstores/:id endpoint)
+- [x] Query books availability across stores (Implemented via GET /books endpoint with store filtering)
+
+### Store Manager Role
+- [x] Add books to store inventory (Implemented via PUT /bookstores/:id/add-book/:bookId)
+- [x] Remove books from store inventory (Implemented via PUT /bookstores/:id/remove-book/:bookId)
+
+### Admin Role
+- [x] Create new bookstore (Implemented via POST /bookstores)
+- [x] Add new books (Implemented via POST /books)
+- [x] Manage book quantities in stores (Implemented via PUT /bookstores/:id/add-book/:bookId and remove-book endpoints)
+- [x] User management (Implemented via POST /users endpoint)
+- [x] Role management (Implemented as part of user creation/update)
+
+### Database Schema
+- [x] Book Table implementation
+- [x] Bookstore Table implementation
+- [x] Many-to-Many relationship between Books and Bookstores
+
+### Security
+- [x] Role-based access control (RBAC)
+- [x] JWT Authentication
+- [x] Password hashing with bcrypt
+
 ## 🏗️ Models & Rules
 
 ### 👤 User
