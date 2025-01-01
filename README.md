@@ -296,7 +296,7 @@ Authorization: Bearer <your_jwt_token>
 
 - **ADMIN**: Full access to all endpoints
 - **STORE_MANAGER**: Manage books and bookstore inventory
-- **STAFF**: View books and bookstore information
+- **USER**: View books and bookstore information
 
 ## 🏗️ Project Structure
 

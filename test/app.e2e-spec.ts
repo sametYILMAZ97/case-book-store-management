@@ -25,7 +25,7 @@ describe('AppController (e2e)', () => {
       .post('/auth/login')
       .send({ username: 'admin', password: 'password123' })
       .expect(201)
-      .expect(res => {
+      .expect((res) => {
         expect(res.body).toHaveProperty('access_token');
       });
   });
@@ -35,7 +35,7 @@ describe('AppController (e2e)', () => {
       .get('/users')
       .set('Authorization', 'Bearer test-token')
       .expect(200)
-      .expect(res => {
+      .expect((res) => {
         expect(Array.isArray(res.body)).toBeTruthy();
       });
   });

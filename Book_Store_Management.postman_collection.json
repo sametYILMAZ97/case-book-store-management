@@ -294,7 +294,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "bookstore_id_here"
+									"value": ""
 								}
 							]
 						}
@@ -331,11 +331,11 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "bookstore_id_here"
+									"value": ""
 								},
 								{
 									"key": "bookId",
-									"value": "book_id_here"
+									"value": ""
 								}
 							]
 						}
