@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "513819bc-0c9e-4371-90bd-8dac2a61d880",
-		"name": "Book Store Management API v2 Copy",
+		"name": "Book Store Management API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28513857",
 		"_collection_link": "https://poliark-cloud-run-services.postman.co/workspace/Poliark-Team-Workspace~7c659b37-6fcd-4349-96dc-d7ceb10c1ffe/collection/28513857-513819bc-0c9e-4371-90bd-8dac2a61d880?action=share&source=collection_link&creator=28513857"
@@ -157,7 +157,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Sample Book 2\",\n    \"author\": \"John Doe\",\n    \"description\": \"A sample book description\",\n    \"isbn\": \"1234567890\"\n}",
+							"raw": "{\n    \"title\": \"Sample Book 3\",\n    \"author\": \"John Doe\",\n    \"description\": \"A sample book description\",\n    \"isbn\": \"1234567893\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -421,7 +421,7 @@
 	"variable": [
 		{
 			"key": "accessToken",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiNjVjMDNiNDAtMGJmYi00YzgxLTg1OGYtZTYyMWY2NzdkMjcwIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM1NzM2NDEzLCJleHAiOjE3MzU3NDAwMTN9.7uc0qli6sWfpjGuq0-3V8yvLDQY_EetosvRArPpqoF4",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiNjVjMDNiNDAtMGJmYi00YzgxLTg1OGYtZTYyMWY2NzdkMjcwIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM1NzU5Njk4LCJleHAiOjE3MzU3NjMyOTh9.dLEVybvFo37A6Yw3bLOkCHQovauhQFcyU_6bYy-7B-8",
 			"type": "string"
 		}
 	]
