@@ -77,7 +77,7 @@ A robust book store management system built with NestJS and TypeORM.
   - `id`: UUID (auto-generated)
   - `username`: String (unique)
   - `password`: String (hashed)
-  - `role`: Enum (ADMIN, STORE_MANAGER, STAFF)
+  - `role`: Enum (ADMIN, STORE_MANAGER, USER)
   - `createdAt`: DateTime
   - `updatedAt`: DateTime
 
